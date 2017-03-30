@@ -13,7 +13,9 @@ public class BulletInfo {
     public final static int BULLET_TYPE_MISSILE_BACON = 1;
     public final static int BULLET_TYPE_MISSILE_NEWTON = 2;
 
-    public final static int BULLET_SPEED_DEFAULT = 5;
+    public final static int BULLET_SPEED_FAST = 7;
+    public final static int BULLET_SPEED_MIDDLE = 5;
+    public final static int BULLET_SPEED_SLOW = 3;
 
     private int type;
     private String name;

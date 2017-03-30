@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import fengyu.aoshen.topeakdemo.tools.Tools;
 import fengyu.aoshen.topeakdemo.view.Fighter;
 import fengyu.aoshen.topeakdemo.fighter.Shooter;
 import fengyu.aoshen.topeakdemo.view.BulletBarrage;

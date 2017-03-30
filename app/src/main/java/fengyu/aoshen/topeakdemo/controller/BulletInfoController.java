@@ -2,12 +2,11 @@ package fengyu.aoshen.topeakdemo.controller;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 
 import java.util.ArrayList;
 
 import fengyu.aoshen.topeakdemo.R;
-import fengyu.aoshen.topeakdemo.Tools;
+import fengyu.aoshen.topeakdemo.tools.Tools;
 import fengyu.aoshen.topeakdemo.model.BulletInfo;
 
 /**
@@ -83,7 +82,7 @@ public class BulletInfoController {
                 "Davincii",
                 BulletInfo.BULLET_TYPE_MISSILE_DAVINCCI,
                 1,
-                BulletInfo.BULLET_SPEED_DEFAULT,
+                BulletInfo.BULLET_SPEED_FAST,
                 R.drawable.icon_bullet_type_missile_davincci,
                 R.drawable.icon_bullet_list_item_missile_davincci);
 
@@ -91,7 +90,7 @@ public class BulletInfoController {
                 "Bacon",
                 BulletInfo.BULLET_TYPE_MISSILE_BACON,
                 2,
-                BulletInfo.BULLET_SPEED_DEFAULT,
+                BulletInfo.BULLET_SPEED_MIDDLE,
                 R.drawable.icon_bullet_type_missile_bacon,
                 R.drawable.icon_bullet_list_item_missile_bacon);
 
@@ -99,7 +98,7 @@ public class BulletInfoController {
                 "Newton",
                 BulletInfo.BULLET_TYPE_MISSILE_NEWTON,
                 3,
-                BulletInfo.BULLET_SPEED_DEFAULT,
+                BulletInfo.BULLET_SPEED_SLOW,
                 R.drawable.icon_bullet_type_missile_newton,
                 R.drawable.icon_bullet_list_item_missile_newton);
 
