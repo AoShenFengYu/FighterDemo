@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color232122"
+    tools:context="fengyu.aoshen.topeakdemo.MainActivity">
+
+
+    <ImageView
+        android:id="@+id/activity_main_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/activity_main_bullet_barrage_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include layout="@layout/activity_main_top_content" />
+
+    <RelativeLayout
+        android:id="@+id/activity_main_fighter_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/activity_main_top_layout" />
+
+    <ImageButton
+        android:id="@+id/activity_main_fire_button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_button_fire" />
+
+    <ImageView
+        android:id="@+id/activity_main_current_bullet_type_icon"
+        android:layout_width="@dimen/bullet_width"
+        android:layout_height="@dimen/bullet_height"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="15dp"
+        android:scaleType="fitCenter" />
+
+</RelativeLayout>
