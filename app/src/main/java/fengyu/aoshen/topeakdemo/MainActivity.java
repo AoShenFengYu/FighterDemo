@@ -2,12 +2,16 @@ package fengyu.aoshen.topeakdemo;
 
 import android.graphics.Bitmap;
 import android.os.Build;
+import android.os.Handler;
+import android.os.HandlerThread;
+import android.os.Looper;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -63,9 +67,36 @@ public class MainActivity extends AppCompatActivity {
 
             startGetData();
 
+
+            testThread();
+
+
         } else {
             reLoadApp();
         }
+    }
+
+    private void testThread() {
+
+        HandlerThread handlerThread = new HandlerThread("我的背景執行續");
+        handlerThread.start();
+
+        Log.e(TAG, "In Ui Thread, getMainLooper is "+ Looper.getMainLooper());
+        Log.e(TAG, "In Ui Thread, myLooper is "+ Looper.myLooper());
+
+        Handler handler = new Handler(handlerThread.getLooper());
+
+        handler.post(new Runnable() {
+            @Override
+            public void run() {
+                Log.e(TAG, "start work");
+
+                Log.e(TAG, "In Handler Thread, getMainLooper is "+ Looper.getMainLooper());
+                Log.e(TAG, "In Handler Thread, myLooper is "+ Looper.myLooper());
+
+            }
+        });
+
     }
 
     private void startGetData() {
